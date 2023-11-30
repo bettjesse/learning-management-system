@@ -23,7 +23,7 @@ const SearchPage = async ({
   if (!userId) {
     return redirect("/");
   }
-
+  console.log("User ID:", userId);
   const categories = await db.category.findMany({
     orderBy: {
       name: "asc"
